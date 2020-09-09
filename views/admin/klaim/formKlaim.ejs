@@ -1,0 +1,97 @@
+<div class="tab-content">
+    <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
+        <div class="main-card mb-3 card">
+            <div class="card-body"><h5 class="card-title">Upload data Klaim</h5>
+                <form class="">
+                    <div class="form-row">
+                        <div class="col-md-4">
+                            <div class="position-relative form-group">
+                                <label for="uiw" class="">UIW/UID</label>
+                                <select name="uiw" id="uiw" class="form-control" required> 
+                                    <option selected>Choose...</option>
+                                      <option value="1">UID Banten</option>
+                                      <option value="2">UID Disjaya</option>
+                                      <option value="3">UID Jabar</option>
+                                      <option value="4">UID Lampung</option>
+                                      <option value="5">UID Jateng</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="position-relative form-group">
+                                <label for="area" class="">Area</label>
+                                <select name="area" id="area" class="form-control" required> 
+                                    <option selected>Choose...</option>
+                                      <option value="1">Banten Selatan</option>
+                                      <option value="2">Banten Utara</option>
+                                      <option value="3">Teluk Naga</option>
+                                      <option value="4">Cikokol</option>
+                                      <option value="5">Cikupa</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="position-relative form-group">
+                                <label for="noKlaim" class="">Nomor Klaim</label>
+                                <input name="noKlaim" id="noKlaim" placeholder="Nomor SPB" type="noKlaim"                                                          class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4">
+                            <div class="position-relative form-group">
+                                <label for="noSurat" class="">Nomor Surat</label>
+                                <input name="noSurat" id="noSurat" type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="position-relative form-group">
+                                <label for="produksi" class="">Tahun Produksi</label>
+                                <input name="produksi" id="produksi" type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="position-relative form-group">
+                                <label for="status" class="">Status Klaim</label>
+                                <select name="status" id="status" class="form-control" required> 
+                                    <option selected>Choose...</option>
+                                      <option value="1">Claim</option>
+                                      <option value="2">Disclaim</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4">
+                            <div class="position-relative form-group">
+                                <label for="tipe" class="">Type</label>
+                                <select name="tipe" id="tipe" class="form-control" required> 
+                                    <option selected>Choose...</option>
+                                      <option value="1">CSI-01</option>
+                                      <option value="2">CSI-11</option>
+                                      <option value="3">CSI-21</option>
+                                      <option value="4">CSI-12</option>
+                                      <option value="5">P12A4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="position-relative form-group">
+                                <label for="jmlKlaim" class="">Jumlah Klaim</label>
+                                <input name="jmlKlaim" id="jmlKlaim" type="number" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="position-relative form-group">
+                                <label for="nomorSN" class="">Nomor SN</label>
+                                <input name="nomorSN" id="nomorSN" type="file" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="mt-2 btn btn-primary">Save</button>
+                    <button type="reset" class="mt-2 btn btn-warning">Clear</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

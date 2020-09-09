@@ -5,8 +5,7 @@ const adminController = require('../controller/adminController');
 router.get('/dashboard', adminController.viewDashboard);
 
 // end point pengiriman
-router.get('/pegiriman', adminController.addPengiriman);
-router.get('/report-pengiriman', adminController.viewPengiriman);
+router.get('/pegiriman', adminController.viewPengiriman);
 
 // end point analisa
 router.get('/analis', adminController.viewAnalisa);
@@ -21,19 +20,17 @@ router.get('/consumers', adminController.viewConsumers);
 router.get('/fis', adminController.viewFis);
 
 // end point klaim
-router.get('/klaim', adminController.addKlaim);
+router.get('/klaim', adminController.viewKlaim);
 router.get('/document', adminController.viewDocument);
-router.get('/report-klaim', adminController.viewKlaim);
 
 //end point penggantian
-router.get('/penggantian', adminController.addPenggantian);
-router.get('/report-penggantian', adminController.viewPenggantian);
+router.get('/penggantian', adminController.viewPenggantian);
 
 // end point product
 router.get('/product', adminController.viewProduct);
 
 // end point report
-router.get('/report', adminController.viewProduct);
+router.get('/report', adminController.viewReport);
 
 // end point serachsn
 router.get('/searchsn', adminController.viewSerach);

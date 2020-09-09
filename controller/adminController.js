@@ -6,9 +6,6 @@ module.exports = {
     viewPengiriman: (req, res) => {
         res.render('admin/pengiriman/viewPengiriman');
     },
-    addPengiriman : (req, res) => {
-        res.render('admin/pengiriman/addPengiriman');
-    },
 
     viewAnalisa : (req, res) => {
         res.render('admin/analisa/viewAnalis');
@@ -28,16 +25,10 @@ module.exports = {
         res.render('admin/klaim/viewKlaim');
     },
     viewDocument  : (req, res) => {
-        res.render('admin/klaim/viewDocument');
-    },
-    addKlaim      : (req, res) => {
-        res.render('admin/klaim/addKlaim');
+        res.render('admin/klaim/document/viewDocument');
     },
     viewPenggantian : (req, res) => {
         res.render('admin/penggantian/viewPenggantian');
-    },
-    addPenggantian : (req, res) => {
-        res.render('admin/penggantian/addPenggantian');
     },
     viewProduct : (req, res) => {
         res.render('admin/product/viewProduct');

@@ -1,0 +1,92 @@
+<div class="tab-content">
+    <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
+        <div class="main-card mb-3 card">
+            <div class="card-body">
+                <h5 class="card-title">Add Users</h5>
+                <form class="">
+                    <div class="form-row">
+                        <div class="col-md-4">
+                            <div class="position-relative form-group">
+                                <label for="name" class="">Full Name</label>
+                                <input name="name" id="name" placeholder=" Enter Your Name" type="text"                                                          class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="position-relative form-group">
+                                <label for="username" class="">Username</label>
+                                <input name="username" id="username" placeholder=" Enter Username" type="text"                                                          class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="position-relative form-group">
+                                <label for="password" class="">Password</label>
+                                <input name="password" id="password" placeholder="Enter Password" type="password"                                                          class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <div class="position-relative form-group">
+                                <label for="jabatan" class="">Position</label>
+                                <input name="jabatan" id="jabatan" placeholder="Nomor Surat" type="text"                                                          class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="position-relative form-group">
+                                <label for="level" class="">Level</label>
+                                <select name="level" id="level" class="form-control">
+                                    <option selected>Choose..</option>
+                                    <option value="1"> 1 Administrator</option>
+                                    <option value="2"> 2 Staff</option>
+                                    <option value="3"> 3 Operator</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="mt-2 btn btn-primary">Save</button>
+                    <button type="reset" class="mt-2 btn btn-warning">Clear</button>
+                </form>
+            </div>
+        </div>
+        <div class="main-card mb-3 card">
+            <div class="col-lg-12">
+                <div class="card-body"><h5 class="card-title">Data Users</h5>
+                    <table class="mb-0 table table-bordered" id="dataTable">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nama</th>
+                            <th>Username</th>
+                            <th>Position</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Ahsan Tawil</td>
+                            <td>ahsantawil</td>
+                            <td>Technical Engineer</td>
+                            <td>edit/del</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                              <td>edit/del</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>edit/del</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>        
+        </div>
+    </div>
+</div>
