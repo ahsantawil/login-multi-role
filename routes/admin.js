@@ -10,6 +10,9 @@ router.get('/pegiriman', adminController.viewPengiriman);
 // end point analisa
 router.get('/analis', adminController.viewAnalisa);
 
+// end point Garansi
+router.get('/garansi', adminController.viewGaransi);
+
 //end point ceksn
 router.get('/ceksn', adminController.viewCeksn);
 

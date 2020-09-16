@@ -10,6 +10,9 @@ module.exports = {
     viewAnalisa : (req, res) => {
         res.render('admin/analisa/viewAnalis');
     },
+    viewGaransi : (req, res) => {
+        res.render('admin/cekgaransi/viewGaransi');
+    },
 
     viewCeksn   : (req, res) => {
         res.render('admin/ceksn/viewCeksn');
