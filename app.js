@@ -6,10 +6,30 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
+// body parser midleware
+const bodyParser  = require('body-parser'); 
+
 // router admin
 const adminRouter = require('./routes/admin');
 
 var app = express();
+
+
+// import mysql database
+const mysql = require('mysql');
+const con  = mysql.createConnection({
+  host : 'localhost',
+  user : 'root',
+  password : '',
+  database : 'afs-sanxing'
+});
+
+// connect database 
+// con.connect((err)=> {
+//   if(err) throw err;
+//   console.log('Mysql Connected');
+// });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
