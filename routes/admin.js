@@ -1,4 +1,4 @@
-const router          = require('express').Router();
+const router = require('express').Router();
 const adminController = require('../controller/adminController');
 
 
@@ -40,6 +40,9 @@ router.get('/searchsn', adminController.viewSerach);
 
 // end point users
 router.get('/users', adminController.viewUsers);
+router.post('/users', adminController.addUsers);
+router.put('/users', adminController.editUsers);
+router.delete('/users/:id', adminController.deleteUsers);
 
 
 module.exports = router;
