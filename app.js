@@ -4,6 +4,15 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
+// import database
+const mongoose = require('mongoose');
+  mongoose.connect('mongodb://127.0.0.1:27017/db_afs', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+});
+
 // body parser midleware
 const bodyParser = require("body-parser");
 const methodOverride = require('method-override');
@@ -32,12 +41,9 @@ app.use(
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-// import template
-app.use(
-  "/admin-template",
-  express.static(path.join(__dirname, "public/assets"))
-);
-app.use("login", express.static(path.join(__dirname, "public/login")));
+// import template and Fontawesome
+app.use('/style', express.static(path.join(__dirname, 'public/assets')));
+app.use('/font', express.static(path.join(__dirname, 'node_modules/@fortawesome/fontawesome-free')));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);

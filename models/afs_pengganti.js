@@ -1,31 +1,54 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class afs_pengganti extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
-  };
-  afs_pengganti.init({
-    sn_klaim: DataTypes.STRING,
-    no_klaim: DataTypes.STRING,
-    uiw: DataTypes.STRING,
-    area: DataTypes.STRING,
-    tgl_kirim: DataTypes.STRING,
-    garansi: DataTypes.STRING,
-    no_spb: DataTypes.STRING,
-    type: DataTypes.STRING,
-    qty: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'afs_pengganti',
-  });
-  return afs_pengganti;
-};
+const mongoose = require('mongoose');
+
+const afs_penggantiSchema = new mongoose.Schema({
+  sn_pengganti: {
+    type: String,
+    required: true
+  },
+  sn_klaim: {
+    type: String,
+    required: true
+  },
+  no_klaim: {
+    type: String,
+    required: true
+  },
+  uiw: {
+    type: String,
+    required: true
+  },
+  area: {
+    type: String,
+    required: true
+  },
+  tgl_kirim: {
+    type: String,
+    required: true
+  },
+  garansi: {
+    type: String,
+    required: true
+  },
+  no_do: {
+    type: String,
+    required: true
+  },
+  type_product: {
+    type: String,
+    required: true
+  },
+  qty: {
+    type: String,
+    required: true
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  },
+  updateAt: {
+    type: Date,
+    default: Date.now
+  }
+})
+
+module.exports = mongoose.model('afs_pengganti', afs_penggantiSchema);

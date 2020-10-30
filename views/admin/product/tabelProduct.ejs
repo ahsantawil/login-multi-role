@@ -1,38 +1,43 @@
 <div class="col-lg-12">
     <div class="main-card mb-3 card">
-        <div class="card-body"><h5 class="card-title">Report Tabel</h5>
+        <div class="card-body">
+            <h5 class="card-title">Report Tabel</h5>
             <table class="mb-0 table table-bordered" id="dataTable">
                 <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Specification</th>
-                    <th>Description</th>
-                    <th>Action</th>
-                </tr>
+                    <tr>
+                        <th>#</th>
+                        <th>Nama Produk</th>
+                        <th>Tipe Produk</th>
+                        <th>Specification</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>edit/delete</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                      <td>edit/delete</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    <td>edit/delete</td>
-                </tr>
+                    <% for(let i=0; i< product.length; i++ ) { %>
+                    <tr>
+                        <th scope="row"><%= i+1 %></th>
+                        <td><%= product[i].name_product %></td>
+                        <td><%= product[i].type_product %></td>
+                        <td><%= product[i].spec_product %></td>
+                        <td><%= product[i].desc_product %></td>
+                        <td>
+                            <form action="/admin/product/<%= product[i].id %>?_method=DELETE" method="POST">
+                                <a href="javascript:void()" type="button"
+                                    class="btn btn-info btn-circle btn-sm button-update"
+                                    data-id="<%= product[i].id %>" 
+                                    data-name="<%= product[i].name_product %>"
+                                    data-type="<%= product[i].type_product %>"
+                                    data-spec="<%= product[i].spec_product %>"
+                                    data-desc="<%= product[i].desc_product %>">
+                                    <i class="fas fa-edit"></i> </a>
+                                <button type="submit" class="btn btn-danger btn-circle btn-sm">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% } %>
                 </tbody>
             </table>
         </div>

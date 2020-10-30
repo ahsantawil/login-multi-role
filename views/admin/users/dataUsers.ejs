@@ -67,28 +67,20 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <% for(let i = 0; i< users.length; i++ ) { %>
                             <tr>
-                                <th scope="row"><%= i+1 %></th>
-                                <td><%= users[i].fullname %></td>
-                                <td><%= users[i].username%></td>
-                                <td><%= users[i].position %></td>
+                                <th scope="row">#</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                                 <td>
-                                    <form action="/admin/users/<%= users[i].id %>?_method=DELETE" method="POST">
-                                        <a href="javascript:void()" type="button"
-                                            class="btn btn-warning btn-circle btn-sm button-update"
-                                            data-id="<%= users[i].id %>" data-fullname="<%= users[i].fullname %>"
-                                            data-username="<%= users[i].username %>"
-                                            data-password="<%= users[i].password %>"
-                                            data-position="<%= users[i].position %>" data-level="<%= users[i].level %>">
-                                            <i class="fas fa-edit"></i> </a>
-                                        <button type="submit" class="btn btn-danger btn-circle btn-sm">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </form>
+                                    <a href="" type="button"
+                                        class="btn btn-warning btn-circle btn-sm button-update">
+                                        <i class="fas fa-edit"></i> </a>
+                                    <button type="submit" class="btn btn-danger btn-circle btn-sm">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
                                 </td>
                             </tr>
-                            <% } %>
                         </tbody>
                     </table>
                 </div>

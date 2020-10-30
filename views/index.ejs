@@ -1,80 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>AFS</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="./login/images/icons/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="./login/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="./login/vendor/animate/animate.css">
-    <link rel="stylesheet" type="text/css" href="./login/vendor/css-hamburgers/hamburgers.min.css">
-    <link rel="stylesheet" type="text/css" href="./login/vendor/select2/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="./login/css/util.css">
-    <link rel="stylesheet" type="text/css" href="./login/css/main.css">
+	<title>Login || AFS</title>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="description" content="codedthemes">
+	<meta name="keywords"
+		  content=", Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+	<meta name="author" content="codedthemes">
+
+	<!-- Favicon icon -->
+	<link rel="shortcut icon" href="/style/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="/style/images/favicon.ico" type="image/x-icon">
+
+	<!-- Google font-->
+   <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+
+	<!-- Font Awesome -->
+	<link href="/style/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!--ico Fonts-->
+	<link rel="stylesheet" type="text/css" href="/style/icon/icofont/css/icofont.css">
+
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="/style/plugins/bootstrap/css/bootstrap.min.css">
+
+	<!-- waves css -->
+	<link rel="stylesheet" type="text/css" href="/style/plugins/Waves/waves.min.css">
+
+	<!-- Style.css -->
+	<link rel="stylesheet" type="text/css" href="/style/css/main.css">
+
+	<!-- Responsive.css-->
+	<link rel="stylesheet" type="text/css" href="/style/css/responsive.css">
+
+	<!--color css-->
+	<link rel="stylesheet" type="text/css" href="/style/css/color/color-1.min.css" id="color"/>
+
 </head>
+    <body>
+        <section class="login p-fixed d-flex text-center bg-primary common-img-bg">
+            <!-- Container-fluid starts -->
+            <div class="container-fluid">
+                <div class="row">
 
-<body>
-    <div class="limiter">
-        <div class="container-login100">
-            <div class="wrap-login100">
-                <div class="login100-pic js-tilt" data-tilt>
-                    <img src="./login/images/img-01.png" alt="IMG">
+                    <div class="col-sm-12">
+                        <div class="login-card card-block">
+                            <form class="md-float-material" action="/admin/dashboard">
+                                <div class="text-center">
+                                    <img src="/style/images/logo-afs.png" alt="logo">
+                                </div>
+                                <h3 class="text-center txt-primary">
+                                    Sign In to your account
+                                </h3>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="md-input-wrapper">
+                                            <input type="text" class="md-form-control" required="required"/>
+                                            <label>Username</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="md-input-wrapper">
+                                            <input type="password" class="md-form-control" required="required"/>
+                                            <label>Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="rkmd-checkbox checkbox-rotate checkbox-ripple m-b-25">
+                                            <label class="input-checkbox checkbox-primary">
+                                                <input type="checkbox" id="checkbox">
+                                                <span class="checkbox"></span>
+                                            </label>
+                                            <div class="captions">Remember Me</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-10 offset-xs-1">
+                                        <button type="submit" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">LOGIN</button>
+                                    </div>
+                                </div>
+                                <!-- <div class="card-footer"> -->
+                                <div class="col-sm-12 col-xs-12 text-center">
+                                    <p>Save Your Account</p>
+                                </div>
+                            </form>
+                            <!-- end of form -->
+                        </div>
+                        <!-- end of login-card -->
+                    </div>
+                    <!-- end of col-sm-12 -->
                 </div>
-                <form class="login100-form validate-form" action="/admin/dashboard">
-                    <span class="login100-form-title">
-                        Welcome AFS
-                    </span>
-                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" type="text" name="text" placeholder="Username">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </span>
-                    </div>
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="pass" placeholder="Password">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                        </span>
-                    </div>
-                    <div class="container-login100-form-btn">
-                        <button class="login100-form-btn">
-                            Login
-                        </button>
-                    </div>
-                    <div class="text-center p-t-12">
-                        <span class="txt1">
-                            Forgot
-                        </span>
-                        <a class="txt2" href="#">
-                            Username / Password?
-                        </a>
-                    </div>
-                    <div class="text-center p-t-136">
-                        <a class="txt2" href="#">
-                            Create your Account
-                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </form>
+                <!-- end of row -->
             </div>
+            <!-- end of container-fluid -->
+        </section>
+
+    <!-- Warning Section Starts -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 9]>
+    <div class="ie-warning">
+        <h1>Warning!!</h1>
+        <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+        <div class="iew-container">
+            <ul class="iew-download">
+                <li>
+                    <a href="http://www.google.com/chrome/">
+                        <img src="/style/images/browser/chrome.png" alt="Chrome">
+                        <div>Chrome</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mozilla.org/en-US/firefox/new/">
+                        <img src="/style/images/browser/firefox.png" alt="Firefox">
+                        <div>Firefox</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.opera.com">
+                        <img src="/style/images/browser/opera.png" alt="Opera">
+                        <div>Opera</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.apple.com/safari/">
+                        <img src="/style/images/browser/safari.png" alt="Safari">
+                        <div>Safari</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                        <img src="/style/images/browser/ie.png" alt="">
+                        <div>IE (9 & above)</div>
+                    </a>
+                </li>
+            </ul>
         </div>
+        <p>Sorry for the inconvenience!</p>
     </div>
-    <script src="./login/vendor/jquery/jquery-3.2.1.min.js"></script>
-    <script src="./login/vendor/bootstrap/js/popper.js"></script>
-    <script src="./login/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./login/vendor/select2/select2.min.js"></script>
-    <script src="./login/vendor/tilt/tilt.jquery.min.js"></script>
-    <script>
-        $('.js-tilt').tilt({
-            scale: 1.1
-        })
-    </script>
-    <script src="./login/js/main.js"></script>
+    <![endif]-->
+    <!-- Warning Section Ends -->
+    <!-- Required Jqurey -->
+    <script src="/style/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="/style/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/style/plugins/tether/dist/js/tether.min.js"></script>
 
-</body>
+    <!-- Required Fremwork -->
+    <script src="/style/plugins/bootstrap/js/bootstrap.min.js"></script>
 
+    <!-- waves effects.js -->
+    <script src="/style/plugins/Waves/waves.min.js"></script>
+    <!-- Custom js -->
+    <script type="text/javascript" src="/style/pages/elements.js"></script>
+
+    </body>
 </html>

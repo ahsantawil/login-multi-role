@@ -1,30 +1,50 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class afs_delivery extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
-  };
-  afs_delivery.init({
-    no_spb: DataTypes.STRING,
-    no_do: DataTypes.STRING,
-    tgl_kirim: DataTypes.STRING,
-    garansi: DataTypes.STRING,
-    uiw: DataTypes.STRING,
-    area: DataTypes.STRING,
-    type: DataTypes.STRING,
-    qty: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'afs_delivery',
-  });
-  return afs_delivery;
-};
+const mongoose = require('mongoose');
+
+const afs_deliverySchema = new mongoose.Schema({
+  sn_delivery: {
+    type: String,
+    required: true
+  },
+  no_spb: {
+    type: String,
+    required: true
+  },
+  no_do: {
+    type: String,
+    required: true
+  },
+  tgl_kirim: {
+    type: String,
+    required: true
+  },
+  garansi: {
+    type: String,
+    required: true
+  },
+  uiw: {
+    type: String,
+    required: true
+  },
+  area: {
+    type: String,
+    required: true
+  },
+  type_meter: {
+    type: String,
+    required: true
+  },
+  qty: {
+    type: String,
+    required: true
+  },
+  createdAt: {
+    type: Date,
+    default:Date.now
+  },
+  updatedAt: {
+    type: Date,
+    default:Date.now
+  }
+})
+
+module.exports = mongoose.model('afs_delivery', afs_deliverySchema);

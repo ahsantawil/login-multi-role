@@ -1,27 +1,44 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class afs_users extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
+
+const afs_usersSchema = new mongoose.Schema({
+    fullname: {
+      type: String,
+      required: true
+    },
+    username: {
+      type: String,
+      required: true
+    },
+    password: {
+      type: String,
+      required: true
+    },
+    position: {
+      type: String,
+      required: true
+    },
+    level: {
+      type: String,
+      required: true
+    },
+    createdAt: {
+      allowNull: false,
+      type: Date,
+      default: Date.now
+    },
+    updatedAt: {
+      allowNull: false,
+      type: Date,
+      default: Date.now
     }
-  };
-  afs_users.init({
-    fullname: DataTypes.STRING,
-    username: DataTypes.STRING,
-    password: DataTypes.STRING,
-    position: DataTypes.STRING,
-    level: DataTypes.BOOLEAN
-  }, {
-    sequelize,
-    modelName: 'afs_users',
-  });
-  return afs_users;
-};
+});
+
+afs_usersSchema.pre('save', async function (next) {
+  const user = this;
+  if (user.isModified('password')) {
+    user.password = await bcrypt.hash(user.password, 8);
+  }
+})
+
+module.exports = mongoose.model('afs_users', afs_usersSchema);

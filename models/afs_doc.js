@@ -1,27 +1,34 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class afs_doc extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
-  };
-  afs_doc.init({
-    no_surat: DataTypes.STRING,
-    namedoc: DataTypes.STRING,
-    document: DataTypes.STRING,
-    uiw: DataTypes.STRING,
-    area: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'afs_doc',
-  });
-  return afs_doc;
-};
+const mongoose = require('mongoose');
+
+const afs_docSchema = new mongoose.Schema({
+  no_surat: {
+    type: String,
+    required: true
+  },
+  name_doc: {
+    type: String,
+    required: true
+  },
+  document: {
+    type: String,
+    required: true
+  },
+  uiw: {
+    type: String,
+    required: true
+  },
+  area: {
+    type: String,
+    required: true
+  },
+  createdAt: {
+    type: Date,
+    default:Date.now
+  },
+  updatedAt: {
+    type: Date,
+    default:Date.now
+  }
+});
+
+module.exports = mongoose.model('afs_doc', afs_docSchema);

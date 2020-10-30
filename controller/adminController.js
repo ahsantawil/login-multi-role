@@ -1,6 +1,6 @@
-const bcrypt = require('bcryptjs');
+const Product = require('../models/afs_product'); 
 
-const model = require('../models/index');
+const bcrypt = require('bcryptjs');
 
 module.exports = {
     viewDashboard: (req, res) => {
@@ -9,6 +9,9 @@ module.exports = {
 
     viewPengiriman: (req, res) => {
         res.render('admin/pengiriman/viewPengiriman');
+    },
+    formPengiriman: (req, res) => {
+        res.render('admin/pengiriman/formPengiriman');
     },
 
     viewAnalisa: (req, res) => {
@@ -23,22 +26,47 @@ module.exports = {
     },
 
     viewConsumers: (req, res) => {
-        res.render('admin/consumers/viewConsumers');
+        res.render('admin/consumers/viewConsumers')
     },
+    addConsumers: (req, res) => {
+        res.render('admin/consumers');
+    },
+
     viewFis: (req, res) => {
         res.render('admin/fis/viewFis');
     },
+    
     viewKlaim: (req, res) => {
         res.render('admin/klaim/viewKlaim');
     },
+    formKlaim: (req, res) => {
+        res.render('admin/klaim/formKlaim');  
+    },
+
     viewDocument: (req, res) => {
         res.render('admin/klaim/document/viewDocument');
     },
     viewPenggantian: (req, res) => {
         res.render('admin/penggantian/viewPenggantian');
     },
-    viewProduct: (req, res) => {
-        res.render('admin/product/viewProduct');
+
+    viewProduct: async (req, res) => {
+        try {
+            const product = await Product.find();
+            res.render('admin/product/viewProduct', { product });
+        } catch (error) {
+            res.render('admin/product/viewProduct');
+        }
+    },
+    addProduct: async (req, res) => {
+        const { name_product, type_product, spec_product, desc_product } = req.body;
+        await Product.create({
+            name_product,
+            type_product,
+            spec_product,
+            desc_product
+        });
+        res.redirect('/admin/product');
     },
     viewReport: (req, res) => {
         res.render('admin/report/viewReport');
@@ -47,73 +75,13 @@ module.exports = {
         res.render('admin/searchsn/viewSearch');
     },
 
-    viewUsers: async (req, res) => {
-        try {
-            const users = await model.afs_users.findAll();
-            res.render('admin/users/viewUsers', {
-                users,
-            });
-        } catch (error) {
-            res.redirect('/admin/users');
-        }
+    viewUsers: (req, res) => {
+            res.render('admin/users/viewUsers')
     },
-    addUsers: async (req, res) => {
-        try {
-            const {
-                fullname,
-                username,
-                password,
-                position,
-                level
-            } = req.body;
-            await model.afs_users.create({
-                fullname,
-                username,
-                password,
-                position,
-                level
-            });
-            res.redirect('/admin/users');
-        } catch (error) {
-            res.redirect('/admin/users');
-        }
+    addUsers: (req, res) => {
     },
-    editUsers: async (req, res) => {
-        try {
-            const {
-                id,
-                fullname,
-                username,
-                password,
-                position,
-                level
-            } = req.body;
-            const users = await model.afs_users.findOne({
-                _id: id
-            });
-            users.fullname = fullname;
-            users.username = username;
-            users.password = password;
-            users.position = position;
-            users.level = level;
-            await users.save();
-            res.redirect('/admin/users');
-        } catch (error) {
-            res.redirect('/admin/users');
-        }
+    editUsers: (req, res) => {
     },
-    deleteUsers: async (req, res) => {
-        try {
-            const {
-                id
-            } = req.params;
-            const users = await model.afs_users.findOne({
-                _id: id
-            });
-            await users.remove();
-            res.redirect('/admin/users');
-        } catch (error) {
-            res.redirect('/admin/users');
-        }
+    deleteUsers: (req, res) => {
     }
 }

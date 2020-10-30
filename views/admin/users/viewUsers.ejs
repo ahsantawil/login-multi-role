@@ -90,22 +90,4 @@
         </div>
     </div>
 </div>
-<script>
-    $('#dataUsers').on('click', '.button-update', function () {
-        let id = $(this).data('id');
-        let fullname = $(this).data('fullname');
-        let username = $(this).data('username');
-        let password = $(this).data('password');
-        let position = $(this).data('position');
-        let level = $(this).data('level');
-
-        $('#edit-users').modal('show');
-        $('.id').val(id);
-        $('.fullname').val(fullname);
-        $('.username').val(username);
-        $('.password').val(password);
-        $('.position').val(position);
-        $('.level').val(level);
-    })
-</script>
 <%- include('../../partials/js.ejs') %>

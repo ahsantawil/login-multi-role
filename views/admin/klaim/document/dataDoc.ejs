@@ -1,95 +1,43 @@
-<div class="tab-content">
-    <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
-        <div class="main-card mb-3 card">
-            <div class="card-body">
-                <h5 class="card-title">Upload Data Document</h5>
-                <form class="">
-                    <div class="form-row">
-                        <div class="col-md-4">
-                            <div class="position-relative form-group">
-                                <label for="uiw" class="">UIW/UID</label>
-                                <select name="uiw" id="uiw" class="form-control" required> 
-                                    <option selected>Choose...</option>
-                                      <option value="1">UID Banten</option>
-                                      <option value="2">UID Disjaya</option>
-                                      <option value="3">UID Jabar</option>
-                                      <option value="4">UID Lampung</option>
-                                      <option value="5">UID Jateng</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="position-relative form-group">
-                                <label for="area" class="">Area</label>
-                                <select name="area" id="area" class="form-control" required> 
-                                    <option selected>Choose...</option>
-                                      <option value="1">Banten Selatan</option>
-                                      <option value="2">Banten Utara</option>
-                                      <option value="3">Teluk Naga</option>
-                                      <option value="4">Cikokol</option>
-                                      <option value="5">Cikupa</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="position-relative form-group">
-                                <label for="noKlaim" class="">Nomor Surat</label>
-                                <input name="noKlaim" id="noKlaim" placeholder="Nomor Surat" type="noKlaim"                                                          class="form-control" required>
+<div class="row">
+    <div class="col-lg-12">
+        <!-- Row start -->
+        <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <!-- Radio-Button start -->
+                <div class="card-header">
+                    <h5 class="card-header-text">Document Klaim Garansi</h5>
+                </div>
+                <div class="card-block">
+                    <!-- Row start -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs  tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">Add Document</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#profile1" role="tab">Data Document</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content tabs">
+                                <div class="tab-pane active" id="home1" role="tabpanel">
+                                    <p>1. This is Photoshop's version of Lorem IpThis is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
+                                    nec sagittis sem nibh id elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mas Cum sociis natoque penatibus et magnis dis.....</p>
+                                </div>
+                                <div class="tab-pane" id="profile1" role="tabpanel">
+                                    <p>2.Cras consequat in enim ut efficitur. Nulla posuere elit quis auctor interdum praesent sit amet nulla vel enim amet. Donec convallis tellus neque, et imperdiet felis amet.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="col-md-4">
-                            <div class="position-relative form-group">
-                                <label for="nomorSN" class="">Document</label>
-                                <input name="nomorSN" id="nomorSN" type="file" class="form-control" required>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="submit" class="mt-2 btn btn-primary">Save</button>
-                    <button type="reset" class="mt-2 btn btn-warning">Clear</button>
-                </form>
+                    <!-- Row end -->
+                </div>
             </div>
         </div>
-        <div class="main-card mb-3 card">
-            <div class="col-lg-12">
-                <div class="card-body"><h5 class="card-title">Report Tabel</h5>
-                    <table class="mb-0 table table-bordered" id="dataTable">
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Uiw</th>
-                            <th>Area</th>
-                            <th>Nomor Surat</th>
-                            <th>Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Download</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                              <td>Download</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>Download</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>        
         </div>
+        <!-- Row end -->
     </div>
 </div>
