@@ -49,6 +49,9 @@ module.exports = {
     viewPenggantian: (req, res) => {
         res.render('admin/penggantian/viewPenggantian');
     },
+    formPenggantian: (req, res) => {
+        res.render('admin/penggantian/formPenggantian');
+    },
 
     viewProduct: async (req, res) => {
         try {

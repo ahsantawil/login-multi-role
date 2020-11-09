@@ -1,48 +1,43 @@
-<div class="tab-content">
-    <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
-        <div class="main-card mb-3 card">
-            <div class="card-body">
-                <h5 class="card-title">Add UIW</h5>
-                <div>
-                    <form class="form-inline" action="/admin/consumers" method="POST">
-                        <div class="mb-4 mr-sm-4 mb-sm-0 position-relative form-group">
-                            <label for="UIW" class="mr-sm-2">UIW/D</label>
-                            <input type="text" name="uiw" id="uiw" placeholder="Enty Wilayah atau Distribusi"
-                                class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Save</button>
-                    </form>
+<div class="main-card mb-3 card">
+    <div class="card-body">
+        <div>
+            <form class="form-inline" action="/admin/consumers" method="POST">
+                <div class="mb-4 mr-sm-4 mb-sm-0 position-relative form-group">
+                    <label for="UIW" class="mr-sm-2">UIW/D</label>
+                    <input type="text" name="uiw" id="uiw" placeholder="Enty Wilayah atau Distribusi"
+                        class="form-control">
                 </div>
-            </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
         </div>
-        <div class="main-card mb-3 card">
-            <div class="col-lg-12">
-                <div class="card-body">
-                    <h5 class="card-title">Data UIW</h5>
-                    <table class="mb-0 table table-bordered" id="dataTable">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Unit Induk</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">#</th>
-                                <td></td>
-                                <td>
-                                    <a href="#"class="btn btn-warning btn-circle btn-sm button-update">
-                                        <i class="fas fa-edit"></i> </a>
-                                    <button type="submit" class="btn btn-danger btn-circle btn-sm">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+    </div>
+</div>
+<div class="main-card mb-3 card">
+    <div class="col-lg-12">
+        <div class="card-body">
+            <h5 class="card-title">Data UIW</h5>
+            <table class="mb-0 table table-bordered" id="dataTables">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Unit Induk</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">#</th>
+                        <td>Banten</td>
+                        <td>
+                            <a href="#"class="btn btn-warning btn-circle btn-sm button-update">
+                                <i class="fas fa-edit"></i> </a>
+                            <button type="submit" class="btn btn-danger btn-circle btn-sm">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

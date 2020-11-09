@@ -41,9 +41,8 @@ app.use(
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-// import template and Fontawesome
-app.use('/style', express.static(path.join(__dirname, 'public/assets')));
-app.use('/font', express.static(path.join(__dirname, 'node_modules/@fortawesome/fontawesome-free')));
+// import template
+app.use('/style', express.static(path.join(__dirname, 'node_modules/startbootstrap-sb-admin')));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);

@@ -30,7 +30,8 @@ router.get('/dataklaim', adminController.viewKlaim);
 router.get('/document', adminController.viewDocument);
 
 //end point penggantian
-router.get('/penggantian', adminController.viewPenggantian);
+router.get('/penggantian', adminController.formPenggantian);
+router.get('/datapenggantian', adminController.viewPenggantian);
 
 // end point product
 router.get('/product', adminController.viewProduct);

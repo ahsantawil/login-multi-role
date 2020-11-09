@@ -1,102 +1,69 @@
-<aside class="main-sidebar hidden-print ">
-    <section class="sidebar" id="sidebar-scroll">
-        <!-- Sidebar Menu-->
-        <ul class="sidebar-menu">
-            <li class="nav-level">--- Navigation</li>
-            <li class="active treeview">
-                <a class="waves-effect waves-dark" href="/admin/dashboard">
-                    <i class="icon-speedometer"></i><span> Dashboard</span>
-                </a>                
-            </li>
-            <li class="nav-level"></li>
-            <li class="treeview">
-                <a class="waves-effect waves-dark" href="#!"><i class="icon-diamond"></i>
-                    <span> Pengiriman </span>
-                    <i class="icon-arrow-down"></i>
+<div id="layoutSidenav_nav">
+    <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+            <div class="nav">
+                <div class="sb-sidenav-menu-heading">Core</div>
+                <a class="nav-link" href="index.html">
+                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    Dashboard
                 </a>
-                <ul class="treeview-menu">
-                    <li><a class="waves-effect waves-dark" href="/admin/pengiriman"><i class="icon-arrow-right"></i> Data Pengiriman</a></li>
-                    <li><a class="waves-effect waves-dark" href="/admin/datapengiriman"><i class="icon-arrow-right"></i> Report Pengiriman</a></li>
-                </ul>
-            </li>
-            <li class="treeview">
-                <a class="waves-effect waves-dark" href="/admin/garansi">
-                    <i class="fas fa-book-medical"></i><span>  Warranty Check </span>
-                </a>                
-            </li>
-            <li class="treeview">
-                <a class="waves-effect waves-dark" href="#!"><i class="fas fa-reply"></i>
-                    <span>Klaim Garansi</span><i class="icon-arrow-down"></i>
+                <div class="sb-sidenav-menu-heading">Interface</div>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    Layouts
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <ul class="treeview-menu">
-                    <li><a class="waves-effect waves-dark" href="/admin/klaim"><i class="icon-arrow-right"></i> Data Klaim</a></li>
-                    <li><a class="waves-effect waves-dark" href="/admin/dataklaim"><i class="icon-arrow-right"></i> Report Klaim</a></li>
-                    <li><a class="waves-effect waves-dark" href="/admin/document"><i class="icon-arrow-right"></i> Dokumen Klaim</a></li>
-                </ul>
-            </li> 
-            <li class="treeview">
-                <a class="waves-effect waves-dark" href="/admin/analisa">
-                    <i class="fas fa-brain"></i><span>  Analysis </span>
-                </a>                
-            </li>
-            <li class="treeview">
-                <a class="waves-effect waves-dark" href="#!"><i class="fas fa-location-arrow"></i>
-                    <span>Penggantian</span>
-                    <i class="icon-arrow-down"></i>
+                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="layout-static.html">Static Navigation</a>
+                        <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                    </nav>
+                </div>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                    Pages
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <ul class="treeview-menu">
-                    <li><a class="waves-effect waves-dark" href="/admin/penggantian"><i class="icon-arrow-right"></i> Data Penggantian</a></li>
-                    <li><a class="waves-effect waves-dark" href="/admin/datapenggantian"><i class="icon-arrow-right"></i> Report Penggantian</a></li>
-                </ul>
-            </li>
-            <li class="nav-level">--- Report AFS</li>
-            <li class="treeview">
-                <a class="waves-effect waves-dark" href="/admin/report">
-                    <i class="icon-list"></i><span> Data Report AFS</span>
-                </a>                
-            </li>
-            <li class="nav-level">--- Featured AFS</li>
-            <li class="treeview">
-                <a class="waves-effect waves-dark" href="/admin/ceksn">
-                    <i class="fas fa-globe-asia"></i><span> Check SN</span>
-                </a>                
-            </li>
-            <li class="treeview">
-                <a class="waves-effect waves-dark" href="/admin/searchsn">
-                    <i class="fab fa-searchengin"></i><span> Search SN</span>
-                </a>                
-            </li>
-            <li class="treeview">
-                <a class="waves-effect waves-dark" href="#!"><i class="icofont icofont-company"></i>
-                    <span>Data Master</span><i class="icon-arrow-down"></i>
+                <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                            Authentication
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="login.html">Login</a>
+                                <a class="nav-link" href="register.html">Register</a>
+                                <a class="nav-link" href="password.html">Forgot Password</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                            Error
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="401.html">401 Page</a>
+                                <a class="nav-link" href="404.html">404 Page</a>
+                                <a class="nav-link" href="500.html">500 Page</a>
+                            </nav>
+                        </div>
+                    </nav>
+                </div>
+                <div class="sb-sidenav-menu-heading">Addons</div>
+                <a class="nav-link" href="charts.html">
+                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                    Charts
                 </a>
-                <ul class="treeview-menu">
-                    <li>
-                        <a class="waves-effect waves-dark" href="/admin/users">
-                            <i class="icon-arrow-right"></i>
-                            Users
-                        </a>
-                    </li>
-                    <li>
-                        <a class="waves-effect waves-dark" href="/admin/product">
-                            <i class="icon-arrow-right"></i>
-                            Product
-                        </a>
-                    </li>
-                    <li>
-                        <a class="waves-effect waves-dark" href="/admin/consumers">
-                            <i class="icon-arrow-right"></i>
-                            Consumers
-                        </a>
-                    </li>
-                    <li>
-                        <a class="waves-effect waves-dark" href="/admin/fis">
-                            <i class="icon-arrow-right"></i>
-                            Data FIS
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </section>
-</aside>
+                <a class="nav-link" href="tables.html">
+                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                    Tables
+                </a>
+            </div>
+        </div>
+        <div class="sb-sidenav-footer">
+            <div class="small">Logged in as:</div>
+            Start Bootstrap
+        </div>
+    </nav>
+</div>

@@ -1,39 +1,24 @@
-<div class="tab-content">
-    <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
-        <div class="main-card mb-3 card">
-            <div class="card-body">
-                <h5 class="card-title"> Add Product</h5>
-                <form class="" action="/admin/product" method="POST">
-                    <div class="position-relative row form-group">
-                        <label for="name" class="col-sm-2 col-form-label">Name Product</label>
-                        <div class="col-sm-10">
-                            <input name="name_product" id="name_product" placeholder="Name Product" type="text"
-                                class="form-control" required>
-                        </div>
-                    </div>
-                     <div class="position-relative row form-group">
-                        <label for="name" class="col-sm-2 col-form-label">Name Product</label>
-                        <div class="col-sm-10">
-                            <input name="type_product" id="type_product" placeholder="Type Product" type="text"
-                                class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="position-relative row form-group">
-                        <label for="spesification" class="col-sm-2 col-form-label">Spesification</label>
-                        <div class="col-sm-10">
-                            <textarea name="spec_product" id="spec_product" class="form-control"></textarea>
-                        </div>
-                    </div>
-                    <div class="position-relative row form-group">
-                        <label for="description" class="col-sm-2 col-form-label">Description</label>
-                        <div class="col-sm-10">
-                            <textarea name="desc_product" id="desc_product" class="form-control"></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" class="mt-2 btn btn-primary">Save</button>
-                    <button type="reset" class="mt-2 btn btn-warning">Clear</button>
-                </form>
-            </div>
+<form action="/admin/product" method="POST">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="name_product">Nama Produk</label>
+            <input type="text" class="form-control" id="name_product" name="name_product" placeholder="Enter Nama Produk" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="type_product">Tipe Produk</label>
+            <input type="text" class="form-control" id="type_product" name="type_product" placeholder="Enter Tipe Produk" required>
         </div>
     </div>
-</div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="spec_product">Spesifikasi Produk</label>
+            <textarea type="text" class="form-control" id="spec_product" name="spec_product"> </textarea>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="desc_product">Deskripsi Produk</label>
+            <textarea type="text" class="form-control" id="desc_product" name="desc_product"> </textarea>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="reset" class="btn btn-warning">Clear</button>
+</form>
