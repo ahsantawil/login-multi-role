@@ -20,6 +20,14 @@ router.get('/ceksn', adminController.viewCeksn);
 //end point consumers
 router.get('/consumers', adminController.viewConsumers);
 router.post('/consumers', adminController.addConsumers);
+router.put('/consumers', adminController.editConsumers);
+router.delete('/consumers/:id', adminController.deleteConsumers);
+
+// end point Area
+router.get('/area', adminController.viewArea);
+router.post('/area', adminController.addArea);
+router.put('/area', adminController.editArea);
+router.delete('/area/:id', adminController.deleteArea);
 
 // end point fis
 router.get('/fis', adminController.viewFis);
@@ -36,6 +44,8 @@ router.get('/datapenggantian', adminController.viewPenggantian);
 // end point product
 router.get('/product', adminController.viewProduct);
 router.post('/product', adminController.addProduct);
+router.put('/product', adminController.editProduct);
+router.delete('/product/:id', adminController.deleteProduct);
 
 // end point report
 router.get('/report', adminController.viewReport);

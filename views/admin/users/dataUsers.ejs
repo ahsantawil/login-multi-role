@@ -7,21 +7,21 @@
                     <div class="form-row">
                         <div class="col-md-4">
                             <div class="position-relative form-group">
-                                <label for="fullname" class="">Full Name</label>
+                                <label for="fullname">Full Name</label>
                                 <input name="fullname" placeholder=" Enter Your Name" type="text" class="form-control"
                                     required>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="position-relative form-group">
-                                <label for="username" class="">Username</label>
+                                <label for="username">Username</label>
                                 <input name="username" placeholder=" Enter Username" type="text" class="form-control"
                                     required>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="position-relative form-group">
-                                <label for="password" class="">Password</label>
+                                <label for="password">Password</label>
                                 <input name="password" placeholder="Enter Password" type="password" class="form-control"
                                     required>
                             </div>
@@ -30,19 +30,20 @@
                     <div class="form-row">
                         <div class="col-md-6">
                             <div class="position-relative form-group">
-                                <label for="position" class="">Position</label>
-                                <input name="position" placeholder="Posisi Kamu" type="text" class="form-control"
+                                <label for="position">Div/Jabatan</label>
+                                <input name="position" placeholder="Jabatan Kamu" type="text" class="form-control"
                                     required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="position-relative form-group">
-                                <label for="level" class="">Level</label>
+                                <label for="level">Level</label>
                                 <select name="level" class="form-control">
                                     <option selected>Choose..</option>
                                     <option value="1"> 1 Administrator</option>
                                     <option value="2"> 2 Staff</option>
                                     <option value="3"> 3 Operator</option>
+                                    <option value="4"> 4 Analys</option>
                                 </select>
                             </div>
                         </div>
@@ -60,27 +61,35 @@
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Nama</th>
+                                <th>Nama lengkap</th>
                                 <th>Username</th>
-                                <th>Position</th>
-                                <th>Action</th>
+                                <th>Jabatan</th>
+                                <th>Level</th>
+                                <th>Opsi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">#</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <a href="" type="button"
-                                        class="btn btn-warning btn-circle btn-sm button-update">
-                                        <i class="fas fa-edit"></i> </a>
-                                    <button type="submit" class="btn btn-danger btn-circle btn-sm">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </td>
-                            </tr>
+                            <% for(let i = 0; i< users.length; i++) { %>
+                                <tr>
+                                    <th scope="row"><%= i+1 %></th>
+                                    <td><%= users[i].fullname %></td>
+                                    <td><%= users[i].username %></td>
+                                    <td><%= users[i].position %></td>
+                                    <td><%= users[i].level %></td>
+                                    <td>
+                                        <form action="/admin/users/<%=users[i].id%>?_method=DELETE" method="POST">
+                                            <a href="javascript:void()" type="button" class="btn btn-warning btn-sm button-update" data-id="<%= users[i].id %>" 
+                                                data-fullname="<%= users[i].fullname %>" data-username="<%= users[i].username %>"
+                                                data-password="<%= users[i].password %>" data-position="<%= users[i].position %>"
+                                                data-level="<%= users[i].level %>">
+                                                <i class="fas fa-edit"></i> </a>
+                                            <button type="submit" class="btn btn-danger btn-circle btn-sm">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            <% } %>
                         </tbody>
                     </table>
                 </div>

@@ -1,81 +1,138 @@
-<div id="layoutSidenav_nav">
-    <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-        <div class="sb-sidenav-menu">
-            <div class="nav">
-                <div class="sb-sidenav-menu-heading">Core</div>
-                <a class="nav-link" href="/admin/dashboard">
-                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Dashboard
-                </a>
-                <div class="sb-sidenav-menu-heading">Menu</div>
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePengiriman" aria-expanded="false" aria-controls="collapsePengiriman">
-                    <div class="sb-nav-link-icon"><i class="fas fa-location-arrow"></i></div>
-                    Pengiriman
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="collapsePengiriman" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="/admin/pengiriman">Data Pengiriman</a>
-                        <a class="nav-link" href="/admin/datapengiriman">Report Pengiriman</a>
-                    </nav>
-                </div>
-                <a class="nav-link" href="/admin/garansi">
-                    <div class="sb-nav-link-icon"><i class="fas fa-balance-scale"></i></div>
-                    Warranty Check
-                </a>
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseKlaim" aria-expanded="false" aria-controls="collapseKlaim">
-                    <div class="sb-nav-link-icon"><i class="fas fa-share-square"></i></div>
-                    Klaim Garansi
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="collapseKlaim" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="/admin/klaim">Data Klaim</a>
-                        <a class="nav-link" href="/admin/document">Document Klaim</a>
-                        <a class="nav-link" href="/admin/dataklaim">Report Klaim</a>
-                    </nav>
-                </div>
-                <a class="nav-link" href="#">
-                    <div class="sb-nav-link-icon"><i class="fas fa-luggage-cart"></i></div>
-                    Analysis
-                </a>
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePenggantian" aria-expanded="false" aria-controls="collapsePenggantian">
-                    <div class="sb-nav-link-icon"><i class="fas fa-redo-alt"></i></div>
-                    Penggantian
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="collapsePenggantian" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="/admin/penggantian">Data Penggantian</a>
-                        <a class="nav-link" href="/admin/datapenggantian">Report Penggantian</a>
-                    </nav>
-                </div>
-                <div class="sb-sidenav-menu-heading">Report AFS</div>
-                <a class="nav-link" href="/admin/report">
-                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                    Data AFS
-                </a>
-                <div class="sb-sidenav-menu-heading">Featured</div>
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMaster" aria-expanded="false" aria-controls="collapseMaster">
-                    <div class="sb-nav-link-icon"><i class="fas fa-digital-tachograph"></i></div>
-                    Data Master
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="collapseMaster" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="/admin/searchsn">Search SN</a>
-                        <a class="nav-link" href="/admin/ceksn">Check SN</a>
-                        <a class="nav-link" href="/admin/users">Data Users</a>
-                        <a class="nav-link" href="/admin/product">Data Product</a>
-                        <a class="nav-link" href="/admin/consumers">Data Consumers</a>
-                        <a class="nav-link" href="#">Data FIS</a>
-                    </nav>
-                </div>
+<!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+        <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-american-sign-language-interpreting"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">AFS SANXING</div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" href="/admin/dashboard">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Menu
+    </div>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePengiriman"
+            aria-expanded="true" aria-controls="collapsePengiriman">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Pengiriman</span>
+        </a>
+        <div id="collapsePengiriman" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="/admin/pengiriman">Data Pengiriman</a>
+                <a class="collapse-item" href="/admin/datapengiriman">Rekap Pengiriman</a>
             </div>
         </div>
-        <div class="sb-sidenav-footer">
-            <div class="small">Logged in as:</div>
-            Administrator
+    </li>
+    
+    <li class="nav-item">
+        <a class="nav-link" href="/admin/garansi">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Cek Garansi</span></a>
+    </li>
+    
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseKlaim"
+            aria-expanded="true" aria-controls="collapseKlaim">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Klaim Garansi</span>
+        </a>
+        <div id="collapseKlaim" class="collapse" aria-labelledby="headingUtilities"
+            data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="/admin/klaim">Data Klaim</a>
+                <a class="collapse-item" href="/admin/document">Data Dokumen</a>
+                <a class="collapse-item" href="/admin/dataklaim">Rekap Klaim Garansi</a>
+            </div>
         </div>
-    </nav>
-</div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="/admin/analis">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Analisa</span></a>
+    </li>
+
+    <!-- Nav Item - Utilities Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePenggantian"
+            aria-expanded="true" aria-controls="collapsePenggantian">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Penggantian</span>
+        </a>
+        <div id="collapsePenggantian" class="collapse" aria-labelledby="headingUtilities"
+            data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="/admin/penggantian">Data Penggantian</a>
+                <a class="collapse-item" href="/admin/datapenggantian">Rekap Penggantian</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Report
+    </div>
+    <li class="nav-item">
+        <a class="nav-link" href="/admin/report">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Report AFS</span></a>
+    </li>
+
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Master Featured AFS
+    </div>
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+            aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Fitur Data</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Fitur:</h6>
+                <a class="collapse-item" href="/admin/ceksn">Cek SN</a>
+                <a class="collapse-item" href="/admin/searchsn">Search SN</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Data Master:</h6>
+                <a class="collapse-item" href="/admin/product">Produk</a>
+                <a class="collapse-item" href="/admin/area">Konsumen</a>
+                <a class="collapse-item" href="/admin/consumers">uiw</a>
+                <a class="collapse-item" href="/admin/fis">FIS</a>
+                <a class="collapse-item" href="/admin/users">Users</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+
+</ul>

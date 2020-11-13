@@ -1,0 +1,35 @@
+<!-- Modal -->
+<div class="modal fade" id="editArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update UP3/AREA</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/admin/area?_method=PUT" method="POST">
+                    <div class="form-group">
+                        <label for="area">Area / UP3</label>
+                        <input type="text" class="form-control area" name="area" id="area" placeholder="Masukan Area" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="uiw">UIW/UID</label>
+                        <select name="uiw" id="uiw" class="form-control uiw">
+                            <option selected>Choose.. </option>
+                            <% for(let i = 0; i< uid.length; i++) { %>
+                                <option value="<%= uid[i].uiw %>"><%= uid[i].uiw %></option>
+                            <% } %>
+                        </select>
+                    </div>
+                    <input type="hidden" name="id" class="form-control id" id="id">
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

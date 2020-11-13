@@ -8,26 +8,27 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="">
+        <form action="/admin/product?_method=PUT" method="POST">
             <div class="form-group">
                 <label for="name_product">Nama Produk</label>
                 <input type="text" name="name_product" class="form-control name_product">
             </div>
             <div class="form-group">
-                <label for="type_product"></label>
+                <label for="type_product">Tipe Produk</label>
                 <input type="text" name="type_product" class="form-control type_product">
             </div>
             <div class="form-group">
-                <label for="spec_product"></label>
-                <input type="text" name="spec_product" class="form-control spec_product">
+                <label for="spec_product">Spesifikasi Produk</label>
+                <textarea type="text" name="spec_product" class="form-control spec_product"></textarea>
             </div>
             <div class="form-group">
-                <label for="desc_product"></label>
-                <input type="text" name="desc_product" class="form-control desc_product">
+                <label for="desc_product">Deskripsi Produk</label>
+                <textarea type="text" name="desc_product" class="form-control desc_product"></textarea>
             </div>
+            <input type="hidden" name="id" class="form-control id">
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               <button type="submit" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </form>
       </div>

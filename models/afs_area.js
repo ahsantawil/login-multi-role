@@ -6,16 +6,9 @@ const afs_areaSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  uiwId: {
-    _id: {
-      type: ObjectId,
-      ref: 'afs_consumer',
-      required: true
-    },
-    uiw: {
-      type: String,
-      required: true
-    }
+  uiw: {
+    type: String,
+    required: true
   },
   createdAt: {
     type: Date,
