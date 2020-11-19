@@ -16,15 +16,9 @@ const afs_productSchema = new mongoose.Schema({
     desc_product: {
         type: String,
         required: true
-     },
-    createdAt: {
-        type: Date,
-        default: Date.now
-    },
-    updatedAt: {
-        type: Date,
-        default: Date.now
-    }   
+     }
+}, {
+    timestamps: true
 })
 
 module.exports = mongoose.model('afs_product', afs_productSchema);

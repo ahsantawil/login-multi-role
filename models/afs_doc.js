@@ -9,10 +9,6 @@ const afs_docSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  document: {
-    type: String,
-    required: true
-  },
   uiw: {
     type: String,
     required: true
@@ -21,14 +17,12 @@ const afs_docSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  createdAt: {
-    type: Date,
-    default:Date.now
-  },
-  updatedAt: {
-    type: Date,
-    default:Date.now
+  document: {
+    type: String,
+    required: true
   }
+}, {
+  timestamps: true
 });
 
 module.exports = mongoose.model('afs_doc', afs_docSchema);

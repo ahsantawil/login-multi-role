@@ -20,15 +20,9 @@ const afs_analisaSchema = new mongoose.Schema({
   action: {
     type: String,
     required: true
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  },
-  updatedAt: {
-    type: Date,
-    default: Date.now
   }
+}, {
+  timestamps: true
 })
 
 module.exports = mongoose.model('afs_analisa', afs_analisaSchema);

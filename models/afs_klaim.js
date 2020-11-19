@@ -36,15 +36,9 @@ const afs_klaimSchema = new mongoose.Schema({
   qty: {
     type: String,
     required: true
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  },
-  updatedAt: {
-    type: Date,
-    default: Date.now
   }
+}, {
+  timestamps: true
 })
 
 module.exports = mongoose.model('afs_klaim', afs_klaimSchema);

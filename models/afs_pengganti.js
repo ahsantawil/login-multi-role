@@ -40,15 +40,9 @@ const afs_penggantiSchema = new mongoose.Schema({
   qty: {
     type: String,
     required: true
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  },
-  updateAt: {
-    type: Date,
-    default: Date.now
   }
+}, {
+  timestamps: true
 })
 
 module.exports = mongoose.model('afs_pengganti', afs_penggantiSchema);

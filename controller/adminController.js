@@ -1,5 +1,5 @@
 const Product = require('../models/afs_product'); 
-const Consumers = require('../models/afs_consumer');
+const Consumers = require('../models/afs_uiw');
 const Area = require('../models/afs_area');
 const Users = require('../models/afs_users');
 const Delivery = require('../models/afs_delivery');
@@ -139,7 +139,7 @@ module.exports = {
                 req.flash('alertMessage', `Sorry..!! Area ${area} sudah ada, silahkan masukan area lain `);
                 req.flash('alertStatus', 'warning');
                 res.redirect('/admin/area');
-            } else {s
+            } else {
                 const query = await Area.create({
                     area,
                     uiw
@@ -203,10 +203,25 @@ module.exports = {
         });  
     },
 
-    viewDocument: (req, res) => {
-        res.render('admin/klaim/document/viewDocument', {
-            title : 'AFS | doc'
-        });
+    viewDocument: async (req, res) => {
+        try {
+            const document = await Doc.find({}).sort({ createdAt: 'descending' });
+            const uiw = await Consumers.find({});
+            const area = await Area.find({});
+            const alertMessage = req.flash('alertMessage');
+            const alertStatus = req.flash('alertStatus');
+            const alert = { message: alertMessage, status: alertStatus };
+            res.render('admin/klaim/document/viewDocument', {
+                document,
+                uiw,
+                area,
+                title : 'AFS | doc'
+            });
+        } catch (error) {
+            req.flash('alertMessage', `$error.message`);
+            req.flash('alertStatus', 'danger');
+            res.render('admin/klaim/document/viewDocument');
+        }
     },
     viewPenggantian: (req, res) => {
         res.render('admin/penggantian/viewPenggantian', {
@@ -231,6 +246,8 @@ module.exports = {
                 title : "AFS | Product"
             });
         } catch (error) {
+            req.flash('alertMessage', `$error.message`);
+            req.flash('alertStatus', 'danger');
             res.render('admin/product/viewProduct');
         }
     },

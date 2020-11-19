@@ -40,15 +40,9 @@ const afs_fisSchema = new mongooose.Schema({
   type: {
     type: String,
     required: true
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  },
-  updatedAt: {
-    type: Date,
-    default: Date.now
   }
+}, {
+  timestamps: true
 })
 
 module.exports = mongooose.model('afs_fis', afs_fisSchema);

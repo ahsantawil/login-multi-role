@@ -9,15 +9,9 @@ const afs_areaSchema = new mongoose.Schema({
   uiw: {
     type: String,
     required: true
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  },
-  updatedAt: {
-    type: Date,
-    default: Date.now
   }
+}, {
+  timestamps: true
 })
 
 module.exports = mongoose.model('afs_area', afs_areaSchema);

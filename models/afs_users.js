@@ -21,17 +21,9 @@ const afs_usersSchema = new mongoose.Schema({
     level: {
       type: String,
       required: true
-    },
-    createdAt: {
-      allowNull: false,
-      type: Date,
-      default: Date.now
-    },
-    updatedAt: {
-      allowNull: false,
-      type: Date,
-      default: Date.now
     }
+}, {
+  timestamps: true
 });
 
 afs_usersSchema.pre('save', async function (next) {
