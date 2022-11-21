@@ -24,6 +24,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "rules": {
+      "no-unused-vars":"off",
+      "eslint-disable-next-line" : "off"
+    },
     "extends": [
       "react-app",
       "react-app/jest"

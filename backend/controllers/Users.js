@@ -1,9 +1,9 @@
-import Users from "../models/UserModel.js";
+import User from "../models/UserModel.js";
 import argon2 from 'argon2';
 
 export const getUsers = async(req, res) => {
     try {
-        const response = await Users.findAll({
+        const response = await User.findAll({
             attributes: ['uuid', 'name', 'email', 'role']
         });
         res.status(200).json(response);
@@ -15,7 +15,7 @@ export const getUsers = async(req, res) => {
 
 export const getUsersId = async(req, res) => {
     try {
-        const response = await Users.findOne({
+        const response = await User.findOne({
             attributes: ['uuid', 'name', 'email', 'role'],
             where: {
                 uuid: req.params.id
@@ -32,7 +32,7 @@ export const addUsers = async(req, res) => {
     if(password !== confPassword) return res.status(400).json({msg: 'Password dan Confrim password tidak cocok ..!'});
     const hashPassword = await argon2.hash(password);
     try {
-        await Users.create({
+        await User.create({
             name: name,
             email: email,
             password: hashPassword,
@@ -45,7 +45,7 @@ export const addUsers = async(req, res) => {
 };
 
 export const updateUsers = async (req, res) => {
-    const user = await Users.findOne({
+    const user = await User.findOne({
         where: {
             uuid: req.params.id
         }
@@ -60,7 +60,7 @@ export const updateUsers = async (req, res) => {
     }
     if(password !== confPassword) return res.status(400).json({msg: 'Password dan Confrim password tidak cocok ..!'});
     try {
-        await Users.update({
+        await User.update({
             name: name,
             email: email,
             password: hashPassword,
@@ -77,14 +77,14 @@ export const updateUsers = async (req, res) => {
 }
 
 export const deleteUsers = async (req, res) => {
-    const user = await Users.findOne({
+    const user = await User.findOne({
         where: {
             uuid: req.params.id
         }
     });
     if(!user) return res.status(404).json({msg: 'User tidak ditemukan'});
     try {
-        await Users.destroy({
+        await User.destroy({
             where: {
                 id : user.id
             }
